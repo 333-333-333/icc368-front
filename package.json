@@ -1,0 +1,14 @@
+{
+  "name": "icc368-front",
+  "version": "1.0.0",
+  "description": "Front-end para proyecto de museos, Arquitectura de Software [ICC368]",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/cli": "^18.0.4"
+  }
+}
