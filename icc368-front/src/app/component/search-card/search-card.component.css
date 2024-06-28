@@ -1,0 +1,25 @@
+.search-card {
+    background-color: #10161A;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #FDFEFF; 
+  }
+  
+  .search-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .search-card h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #ffffff; 
+  }
+  
+  .search-card p {
+    margin: 8px 0 0;
+    color: #cccccc;
+  }
+  

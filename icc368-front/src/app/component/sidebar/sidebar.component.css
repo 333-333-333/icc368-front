@@ -1,0 +1,97 @@
+.sidebar {
+  background-color: #10161A;
+  color: #FDFEFF;
+  width: 400px;
+  height: 100vh;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  margin-top: 30px;
+}
+
+.profile-section img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile-section h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.profile-section a {
+  color: #e4e9ee;
+  font-size: 14px;
+  margin: 0px;
+}
+
+.menu {
+  flex-grow: 1;
+}
+
+.menu h3 {
+  font-size: 20px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.1s ease;
+}
+
+.menu ul.open {
+  max-height: 500px; /* Ajusta esta altura según el contenido */
+}
+
+.menu li {
+  margin-bottom: 10px;
+  margin-left: 20px;
+  width: 350px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #e4e9ee;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.menu a:hover {
+  background-color: #444;
+}
+
+button {
+  background-color: #FDFEFF;
+  border: none;
+  color: #10161A;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 20px;
+  width: 200px;
+  position: relative;
+  bottom: 10px;
+  left: 17.5%;
+}
+
+button:hover {
+  background-color: #e4e9ee;
+}

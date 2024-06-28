@@ -1,0 +1,22 @@
+<div class="dashboard">
+  <aside [class.hidden]="!sidebarVisible">
+    <app-sidebar [userData]="user"></app-sidebar>
+  </aside>
+  <main class="content">
+    <app-header [userData]="user" (sidebarToggle)="toggleSidebar()"></app-header>
+    
+    <div class="welcome-message">
+      <h1> Búsqueda de datos de la red de museos</h1>
+    <p> Hola, {{ user.name }}. Este espacio ha sido habilitado para que puedas desplegar y analizar los datos más importantes de la red de museos </p>
+    
+    </div>
+    <div class="recently-added">
+        <h2>Últimas consultas añadidas</h2>
+        <div class="search-cards">
+          <app-search-card *ngFor="let search of newestSearches" [cardData]="search"></app-search-card>
+        </div>
+    
+    </div>
+ 
+  </main>
+</div>
