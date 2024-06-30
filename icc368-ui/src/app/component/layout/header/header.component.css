@@ -1,0 +1,55 @@
+/*Header with logo and title*/
+header {
+    position: fixed;
+
+    height: 7.5%;
+    width: 100%;
+    z-index: 999;
+    
+    left: 0;
+    top : 0;
+
+    display: flex;
+    align-items: center;
+   
+    background-color: #10161A;
+    color: rgb(213, 218, 233);
+    
+    text-align: center;
+    position: fixed;
+
+    margin: 0 auto;
+}
+
+.sidebar-hide-button {
+    border: none;
+    margin-left: 20px;
+    background-color: #243038;
+    color: rgb(213, 218, 233);
+    padding: 5px;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+}	
+
+.sidebar-hide-button:hover {
+    background-color: rgb(46, 57, 92);
+    color: rgb(213, 218, 233);
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.25em;
+    color: rgb(213, 218, 233);
+    font-family: 'Roboto-Bold', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-picture {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 20px;
+    padding: 5px;
+}

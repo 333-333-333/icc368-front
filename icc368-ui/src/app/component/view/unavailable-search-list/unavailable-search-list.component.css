@@ -1,0 +1,43 @@
+.card{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+    transition: box-shadow .3s;
+    background-color: #fff;
+    cursor: pointer;
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* Alinea el div en el centro horizontal  y vertical */
+    margin: 10px auto;
+
+
+}
+
+.card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.1);
+}
+
+.card-body{
+    padding: 10px;
+}
+
+.card-title{
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.btn{
+    padding: 5px 10px;
+    border: 1px solid #10161A;;
+    border-radius: 5px;
+    background-color: #10161A;;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color .3s;
+}

@@ -1,0 +1,66 @@
+<!--Busca por rango de fecha y peririocidad-->
+<div class="search-container">
+    <h2>Visitantes y exhibiciones recorridas</h2>
+    <form (ngSubmit)="search()">
+        <label for="startDate">Fecha inicial:</label>
+        <input id="startDate" [(ngModel)]="startDate" name="startDate" type="date" required />
+        <label for="endDate">Fecha final:</label>
+        <input id="endDate" [(ngModel)]="endDate" name="endDate" type="date" required />
+        <label for="periodicity">Periodicidad:</label>
+        <select id="periodicity" [(ngModel)]="periodicity" name="periodicity">
+            <option value="day">Diario</option>
+            <option value="month">Mensual</option>
+            <option value="year">Anual</option>
+        </select>
+        <button type="submit" (click)="search()">Buscar</button>
+    </form>
+</div>
+
+<!-- interface VisitorAndExhibitionData {
+  Nombre_Usuario: string;
+  Apellidos_Usuario: string;
+  Correo_Usuario: string;
+  Nombre_Exhibicion: string;
+  Fecha_Ingreso: Date;
+  Fecha_Salida: Date;
+}-->
+<div *ngIf="dataLoaded && !serviceError; else errorTemplate">
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Correo</th>
+                    <th>Exhibición</th>
+                    <th>Fecha de ingreso</th>
+                    <th>Fecha de salida</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of paginatedData; let i = index">
+                    <td>{{ (currentPage - 1) * itemsPerPage + i + 1 }}</td>
+                    <td>{{ data.Nombre_Usuario }}</td>
+                    <td>{{ data.Apellidos_Usuario }}</td>
+                    <td>{{ data.Correo_Usuario }}</td>
+                    <td>{{ data.Nombre_Exhibicion }}</td>
+                    <td>{{ data.Fecha_Ingreso | date: 'dd/MM/yyyy' }}</td>
+                    <td>{{ data.Fecha_Salida | date: 'dd/MM/yyyy' }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="pagination">
+            <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">Anterior</button>
+            <span>{{ currentPage }} de {{ totalPages() }}</span>
+            <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages()">Siguiente</button>
+        </div>
+    </div>
+</div>
+
+<ng-template #errorTemplate>
+    <div *ngIf="serviceError">
+        <p>Error al cargar los datos de visitantes. Por favor, intenta de nuevo más tarde.</p>
+    </div>
+    </ng-template>
+      

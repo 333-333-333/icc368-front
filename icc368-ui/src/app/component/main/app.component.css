@@ -1,0 +1,30 @@
+.content {
+    /* Dimensiones */
+    height: 92.5%;
+    width: 100%;
+
+    /* Posicionamiento */
+    position: fixed;
+    top: 7.5%;
+
+    /* Padding */
+    padding: 30px;
+
+
+    /* Margenes */
+    margin-left: 14%;
+
+    /* Animación */
+    transition: margin-left 0.3s ease; /* Agrega una transición suave */
+
+    /* Colores */
+    color: rgb(6, 6, 15);
+
+    /* Tipografía */
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .shifted {
+    margin-left: -1%; /* Desplaza el contenido cuando el menú está cerrado */
+  }
+  

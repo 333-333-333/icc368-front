@@ -1,0 +1,53 @@
+<div class="search-container">
+    <h2>Visitantes por periodo de tiempo</h2>
+    <form (ngSubmit)="search()">
+      <label for="startDate">Fecha inicial:</label>
+      <input id="startDate" [(ngModel)]="startDate" name="startDate" type="date" required />
+  
+      <label for="endDate">Fecha final:</label>
+      <input id="endDate" [(ngModel)]="endDate" name="endDate" type="date" required />
+  
+      <label for="periodicity">Periodicidad:</label>
+      <select id="periodicity" [(ngModel)]="periodicity" name="periodicity">
+        <option value="day">Diario</option>
+        <option value="month">Mensual</option>
+        <option value="year">Anual</option>
+      </select>
+  
+      <button type="submit">Buscar</button>
+    </form>
+  </div>
+  
+  <div *ngIf="dataLoaded && !serviceError; else errorTemplate">
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Fechas</th>
+            <th>Cantidad de visitantes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of paginatedData; let i = index">
+            <td>{{ (currentPage - 1) * itemsPerPage + i + 1 }}</td>
+            <td>{{ data.Fecha }}</td>
+            <td>{{ data.Cantidad_Visitantes }}</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <div class="pagination">
+        <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">Anterior</button>
+        <span>{{ currentPage }} de {{ totalPages() }}</span>
+        <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages()">Siguiente</button>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #errorTemplate>
+    <div *ngIf="serviceError">
+      <p>Error al cargar los datos de visitantes. Por favor, intenta de nuevo más tarde.</p>
+    </div>
+  </ng-template>
+  

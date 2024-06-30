@@ -1,0 +1,47 @@
+aside {
+    position: fixed;
+    top: 7.5%;
+    left: 0;
+    width: 15%;
+    height: 92.5%;
+    background-color: #1b242b;
+    transition: left 0.3s ease; 
+    align-items: center;
+}
+
+.closed {
+    left: -15%;
+}
+
+nav {
+    display: flex; /* Alinea los elementos horizontalmente */
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+nav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    width: 75%; /* O ajusta según tus necesidades */
+    display: block;
+    padding: 20px 20px;
+    color: rgb(213, 218, 233);
+    text-decoration: none;
+    font-size: 1em;
+    font-family: 'Roboto-Bold', sans-serif;
+
+    border-radius: 8px;
+    margin: 15px -10px;
+  }
+  
+
+nav a:hover {
+    background-color: rgb(46, 57, 92);
+}
+

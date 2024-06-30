@@ -1,0 +1,14 @@
+.search{
+    position: relative;
+    background-color: #1b242b;
+    color: white;
+    padding: 5px 20px;
+    width: 275px;
+    margin: 5px 10px;
+    border-radius: 8px;
+}
+
+.search:hover{
+    background-color: rgb(46, 57, 92);
+    cursor: pointer;
+}

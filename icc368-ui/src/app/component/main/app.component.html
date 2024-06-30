@@ -1,0 +1,5 @@
+<app-header (menuClick)="sidebar.toggleSidebar()"></app-header>
+<app-sidebar #sidebar></app-sidebar>
+<div class="content" [class.shifted]="!isSidebarOpen">
+    <router-outlet></router-outlet>
+</div>

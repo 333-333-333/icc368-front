@@ -1,0 +1,47 @@
+.last-searches-card {
+    position: relative;
+    top: 55%;
+    left: 20%;
+    width: 50%;
+    height: 23%;
+    
+    /* Estilos de la tarjeta */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    
+}
+
+/* Centra el h2 de last-searches-card */
+.last-searches-card h2{
+    text-align: center;
+}
+
+.welcome{
+    position: relative;
+    left: -5%;
+    text-align: center;
+}
+
+.last-searches{
+    /* Alinea las ultimas busquedas lado a lado */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.last-search{
+    position: relative;
+    background-color: #1b242b;
+    color: white;
+    padding: 0px 20px;
+    width: 275px;
+    margin: 5px 10px;
+    border-radius: 8px;
+}
+
+.last-search:hover{
+    background-color: rgb(46, 57, 92);
+    cursor: pointer;
+}
